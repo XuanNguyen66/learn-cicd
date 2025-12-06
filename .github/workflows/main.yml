@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependecies
+        run: npm install
+
       # - name: Unit Test
       #   run: npm test
 
       - name: Build And Deploy Package
-        run: npm start App.js
+        run: npm run build
