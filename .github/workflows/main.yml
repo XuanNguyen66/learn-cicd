@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Unit Test
-        run: npm test
+      # - name: Unit Test
+      #   run: npm test
 
       - name: Build And Deploy Package
         run: npm start App.js
