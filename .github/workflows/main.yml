@@ -1,0 +1,25 @@
+name: Learn Buid-Depoy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    name: Buid And Deploy Learn
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js env
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Unit Test
+        run: npm test
+
+      - name: Build And Deploy Package
+        run: npm run dev
