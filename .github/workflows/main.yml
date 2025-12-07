@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          dockerFile: DockerFile
+          dockerFile: Dockerfile
           push: false
           tags: ${{ secrets.DOCKER_HUB_USERNAME}}/learn-cicd:latest
 
@@ -45,6 +45,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          dockerfile: DockerFile
+          dockerfile: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME}}/learn-cicd:latest
